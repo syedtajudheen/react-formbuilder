@@ -1,10 +1,10 @@
 {
   "name": "react-formbuilder-headless",
-  "private": true,
+  "private": false,
   "workspaces": [
     "examples/formbuilder-preview"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "types": "dist/react-formbuilder-headless.d.ts",
   "scripts": {
