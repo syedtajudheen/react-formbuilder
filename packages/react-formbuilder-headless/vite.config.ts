@@ -24,10 +24,5 @@ export default defineConfig({
         }
       }
     }
-  },
-  resolve: {
-    alias: {
-      'react-formbuilder-headless': path.resolve(__dirname, 'src')
-    }
   }
 })

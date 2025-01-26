@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      'react-formbuilder-headless': path.resolve(__dirname, '../../dist/react-formbuilder-headless.es.js'),
+      'react-formbuilder-headless': path.resolve(__dirname, '../../packages/react-formbuilder-headless/src'),
       "@": path.resolve(__dirname, "./src"),
     }
   },

@@ -1,23 +1,23 @@
 {
-  "name": "formbuilder-chakra-ui",
+  "name": "react-formbuilder-headless",
   "private": true,
-  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "0.0.2",
   "type": "module",
+  "types": "dist/react-formbuilder-headless.d.ts",
   "scripts": {
-    "dev": "vite",
+    "start": "tsc -b --watch",
     "build": "tsc -b && vite build",
+    "watch": "vite build --watch",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.4.0",
-    "@emotion/react": "^11.14.0",
-    "next-themes": "^0.4.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-formbuilder-headless": "workspace:*",
     "react-hook-form": "7.54.2",
-    "react-icons": "^5.4.0",
     "styled-components": "^6.1.14"
   },
   "devDependencies": {
@@ -31,8 +31,10 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "lerna": "^8.1.9",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.5.0"
   }
 }

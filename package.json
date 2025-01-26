@@ -1,23 +1,22 @@
 {
   "name": "react-formbuilder-headless",
-  "private": false,
+  "private": true,
   "workspaces": [
-    "examples/formbuilder-preview"
+    "packages/*",
+    "examples/*"
   ],
   "version": "0.0.2",
   "type": "module",
   "types": "dist/react-formbuilder-headless.d.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "peerDependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-hook-form": "7.54.2",
-    "styled-components": "^6.1.14"
+    "start": "lerna run start --parallel",
+    "dev": "lerna run --parallel dev --scope formbuilder-chakra-ui && lerna run --parallel start --scope react-formbuilder-headless",
+    "test": "lerna run test",
+    "typecheck": "lerna run typecheck",
+    "lint": "lerna run lint",
+    "build": "lerna run build",
+    "publish": "lerna run publish",
+    "bootstrap": "lerna bootstrap"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
@@ -30,6 +29,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "lerna": "^8.1.9",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5",
